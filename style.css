@@ -64,8 +64,8 @@
   .topnav .search-container button {
     float: right;
     padding: 6px 10px;
-    margin-top: 8px;
-    margin-right: 16px;
+    margin-top: 10px;
+    margin-right: 50px;
     background: #ddd;
     font-size: 17px;
     border: none;
@@ -138,7 +138,6 @@
   
 .welcome-ribbon 
   {
-    background-color: #b5d4e9;
     margin: auto;
     align-content: center;
     text-align: center;
@@ -206,7 +205,6 @@
   .card button {
     background-color: var(--success-color);
   }
-  
   /* Footer */
   footer {
     background-color: #444;
@@ -241,24 +239,53 @@ main {
     margin: 50px auto;
 }
 
-
 .tiles-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 2fr); /* 2 columns */
+  gap: 20px;
+  max-width: 1800px;
+  margin: auto;
 }
 
 .tile {
-  flex: 1 0 200px;
-  background-color: #b5d4e9;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  padding: 10px;
-  border-radius: 10px;
-  transition: transform 0.3s ease-in-out;
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
 }
-
-.tile:hover {
-  transform: scale(1.05);
+.tile h3 {
+  margin: 0 0 10px;
+  color: #333;
+}
+.tile p {
+  font-size: 14px;
+  color: #666;
+}
+.buttons {
+  margin-top: 10px;
+}
+.btn {
+  padding: 8px 15px;
+  margin: 5px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+}
+.take-test {
+  background-color: #007bff;
+  color: white;
+}
+.take-test:hover {
+  background-color: #0056b3;
+}
+.view-concepts {
+  background-color: #28a745;
+  color: white;
+}
+.view-concepts:hover {
+  background-color: #218838;
 }
 
 body {
@@ -321,4 +348,53 @@ body {
 }
 .menu-item:hover .dropdown {
   display: block;
+}
+
+.form-container {
+  max-width: 500px;
+  margin: 50px auto;
+  padding: 20px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.form-group {
+  margin-bottom: 15px;
+}
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #555;
+}
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+}
+textarea {
+  resize: vertical;
+  height: 120px;
+}
+.btn-submit {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.btn-submit:hover {
+  background-color: #0056b3;
+}
+.success-message {
+  display: none;
+  text-align: center;
+  color: green;
+  margin-top: 10px;
 }
